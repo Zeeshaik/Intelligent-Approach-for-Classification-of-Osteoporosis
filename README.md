@@ -39,9 +39,11 @@ To install the required packages, run the following command:
 To run the code, follow these steps:
 
 1. Clone this repository to your local machine.
+
 --> git clone https://github.com/Zeeshaik/Intelligent-Approach-for-Classification-of-Osteoporosis.git
 
 2. Navigate to the project directory.
+
 --> cd Intelligent-Approach-for-Classification-of-Osteoporosis
 
 3. Place your X-ray images in the images folder.
