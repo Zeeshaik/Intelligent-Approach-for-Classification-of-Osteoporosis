@@ -17,7 +17,9 @@ To use the trained model for predicting the class of new X-ray images, we provid
 
 # Requirements
 Python 3.7 or later
+
 TensorFlow 2.x
+
 Keras 2.x
 NumPy
 Pandas
