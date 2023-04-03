@@ -21,12 +21,16 @@ Python 3.7 or later
 TensorFlow 2.x
 
 Keras 2.x
+
 NumPy
+
 Pandas
+
 Matplotlib
+
 OpenCV
 
-#Installation
+# Installation
 To install the required packages, run the following command:
 
 --> pip install -r requirements.txt
