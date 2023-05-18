@@ -38,7 +38,7 @@ def index():
         if file.filename == '':
             return "No file selected"
         if file:
-            file_path = "static/uploads/" + file.filename
+            file_path = "C:/Users/zeesh/OneDrive/Documents/Projects/Intelligent-Approach-for-Classification-of-Osteoporosis/Flask App/static/uploads/" + file.filename
             file.save(file_path)
             prediction = predict(file_path)
             precaution = get_precaution(prediction)
