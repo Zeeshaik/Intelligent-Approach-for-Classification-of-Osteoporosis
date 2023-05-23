@@ -12,11 +12,16 @@
             <h2>Predicted Category:</h2>
             <p>{{prediction}}</p>
             <h2>Precautions:</h2>
-            <p>{{precaution}}</p>
+            <ul>
+                {% for item in precaution %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
     <div class="footer">
-        <a href="C:\Users\zeesh\OneDrive\Documents\Projects\Intelligent-Approach-for-Classification-of-Osteoporosis\README.md">Read me</a>
+        
+        <a href="https://github.com/Zeeshaik/Intelligent-Approach-for-Classification-of-Osteoporosis/blob/master/README.md">Click Here To Know More About Project (Read me)</a>
     <div>
 </body>
 </html>

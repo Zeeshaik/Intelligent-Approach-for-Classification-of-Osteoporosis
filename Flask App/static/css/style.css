@@ -12,6 +12,10 @@ body {
     background-position: center;
 }
 
+a{
+    text-decoration: none;
+    color: #000000;
+}
 
 h1 {
     text-align: center;
@@ -111,12 +115,12 @@ input[type="submit"] {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #75727240;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
   
   h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
   
@@ -135,8 +139,8 @@ input[type="submit"] {
   p {
     font-size: 20px;
     margin-bottom: 10px;
-    text-align: center;
-    background-color: #8888886f;
+    /* text-align: center; */
+    /* background-color: #8888886f; */
     width: 75%;
     border-radius: 10px;
     backdrop-filter: blur(50px);
@@ -149,8 +153,9 @@ input[type="submit"] {
   .footer {
     position:fixed;
     bottom:0;
-    left: 48%;
+    left: 42%;
     width:50%;
     height:50px;
+    text-decoration: none;
     /* background-color: #D0DAEE; */
   }
