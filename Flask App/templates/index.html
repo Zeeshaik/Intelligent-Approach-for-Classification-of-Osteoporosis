@@ -8,6 +8,8 @@
 <body>
     <center>
     <h1>Intelligent Approach for Classification of Osteoporosis</h1>
+    <p style="font-family:poiret-one">Osteoporosis is a bone disease. It occurs when bone density and mass decrease, leading to weakened bones and a higher chance of fractures.<br>
+        Even minor injuries or falls can cause fractures for those with osteoporosis, and many people don’t know they have the disease until they break a bone.<br> For these reasons, it’s important to learn your risk factors, attend a timely osteoporosis screening, and take necessary safety precautions.</p>
     <h2>Upload an image of a bone to classify it as normal or osteoporotic</h2>
     <h2 id='n'><b>NOTE:</b> Only upload Knee X-Ray Images</h2>
     <form id="uploadForm" method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
@@ -17,7 +19,7 @@
             <input type="file" name="file" id="fileInput" accept=".jpg, .jpeg, .png" required>
         </div>
         <div class="form-group">
-            <input type="submit" value="Upload">
+            <input type="submit" value="Classify">
         </div>
     </form>
     <div id="result" class="result-container">

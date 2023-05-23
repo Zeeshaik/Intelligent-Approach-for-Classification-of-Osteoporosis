@@ -15,13 +15,14 @@ def predict(img_path):
     img = np.array(img) / 255.0  # normalize pixel values to [0, 1]
     img = np.expand_dims(img, axis=0)
     img = np.expand_dims(img, axis=-1)
+    # Prediction 
     predictions_single = model.predict(img)
     predicted_category = categories[np.argmax(predictions_single)]
     return predicted_category
 
 def get_precaution(prediction):
     precautions = {
-        'Normal': 'No specific precautions needed.',
+        'Normal': 'Your Knee is normal, No specific precautions needed.',
         'Doubtful': 'Consult a healthcare professional for further evaluation.',
         'Moderate': 'Take necessary precautions and consider medical advice.',
         'Mild': 'Take necessary precautions and consider medical advice.',
@@ -42,7 +43,7 @@ def index():
             file.save(file_path)
             prediction = predict(file_path)
             precaution = get_precaution(prediction)
-            res = prediction + " detected " + precaution
+            # res = prediction + " detected " + precaution
             return render_template("result.html", prediction = prediction, precaution=precaution)
     return render_template("index.html")
 
