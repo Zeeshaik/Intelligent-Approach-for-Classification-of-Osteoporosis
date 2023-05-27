@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
+
 from PIL import Image
 import numpy as np
 import tensorflow as tf
@@ -50,8 +52,12 @@ def index():
             prediction = predict(file_path)
             precaution = get_precaution(prediction)
             # res = prediction + " detected " + precaution
-            return render_template("result.html", prediction = prediction, precaution=precaution)
+            return render_template("result.html", prediction = prediction, precaution=precaution, image_file=file.filename)
     return render_template("index.html")
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory('static/uploads', filename)
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
