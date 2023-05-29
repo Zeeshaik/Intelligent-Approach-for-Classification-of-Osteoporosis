@@ -87,6 +87,10 @@ input[type="submit"] {
     border-radius: 8px;
 }
 
+input[type="submit"]:hover {
+    background-color: #208025;
+}
+
 .result-container {
     display: none;
     margin-top: 30px;
@@ -177,6 +181,23 @@ p {
 
 }
 
+ul li {
+    color: #000000;
+    font-weight: bold;
+    font-family : Arial, sans-serif;
+}
+
+.result p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    border-radius: 10px;
+    backdrop-filter: blur(0px);
+    color: #000000;
+    font-weight: bold;
+    font-family : Arial, sans-serif;
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -263,13 +284,8 @@ p {
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* padding: 10px; */
     background-color: #00000000;
-    border: 1px solid #cccccc39;
-    
     border-radius: 10px;
-    
-
 }
 
 .feedback_{
@@ -283,17 +299,16 @@ p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    
     border-radius: 10px;
     border: 1px solid #cccccc00;
     padding: 10px;
     margin: 10px;
-
 }
 
 .feedback a:hover{
     background-color: #cccccc6e;
 }
+
 #home_{
     font-weight: bold;
     font-size: 20px;
