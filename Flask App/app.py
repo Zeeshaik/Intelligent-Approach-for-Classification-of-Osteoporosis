@@ -8,7 +8,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 img_size = 256
-model = tf.keras.models.load_model('C:/Users/zeesh/OneDrive/Documents/Projects/Intelligent-Approach-for-Classification-of-Osteoporosis/best_model.h5')
+model = tf.keras.models.load_model('C:/Users/zeesh/OneDrive/Documents/Projects/Intelligent-Approach-for-Classification-of-Osteoporosis/Flask App/best_model.h5')
 categories = ['Normal', 'Doubtful', 'Moderate', 'Mild', 'Severe']
 
 def predict(img_path):
