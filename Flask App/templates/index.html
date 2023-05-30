@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image Classification</title>
+    <title>Intelligent Approach for Classification of Osteoporosis</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="brand-title"><a href="{{ url_for('index') }}">OSTEOPOROSIS</a></div>
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="https://github.com/Zeeshaik/Intelligent-Approach-for-Classification-of-Osteoporosis/blob/master/README.md" target = "_blank">Read me</a></li>
+          </ul>
+    </nav>
     <center>
-    <h1>Intelligent Approach for Classification of Osteoporosis</h1>
-    <p style="font-family:poiret-one">Osteoporosis is a bone disease. It occurs when bone density and mass decrease, leading to weakened bones and a higher chance of fractures.<br>
-        Even minor injuries or falls can cause fractures for those with osteoporosis, and many people don’t know they have the disease until they break a bone.<br> For these reasons, it’s important to learn your risk factors, attend a timely osteoporosis screening, and take necessary safety precautions.</p>
-    <h2>Upload an image of a bone to classify it as normal or osteoporotic</h2>
-    <h2 id='n'><b>NOTE:</b> Only upload Knee X-Ray Images</h2>
-    <form id="uploadForm" method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="fileInput">Team : E14</label>
-            <br>
-            <input type="file" name="file" id="fileInput" accept=".jpg, .jpeg, .png" required>
+        <div class= "title_"><h1>Intelligent Approach for Classification of_</h1> <h1 class="title_1">Osteoporosis</h1></div>
+    <div class = "elements">
+        <div class="element1">
+        <p >Osteoporosis is a bone disease. It occurs when bone density and mass decrease, leading to weakened bones and a higher chance of fractures.
+            Even minor injuries or falls can cause fractures for those with osteoporosis, and many people don’t know they have the disease until they break a bone. For these reasons, it’s important to learn your risk factors, attend a timely osteoporosis screening, and take necessary safety precautions.</p>
+        <h2>Upload an image of a bone to classify it as normal or osteoporotic</h2>
+        <h2 id='n'><b>NOTE:</b> Only upload Knee X-Ray Images</h2>
+        <form id="uploadForm" method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
+            <div class="form-group">
+                <br>
+                <input type="file" name="file" id="fileInput" accept=".jpg, .jpeg, .png" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Classify">
+            </div>
         </div>
-        <div class="form-group">
-            <input type="submit" value="Classify">
+
+        <div class="element2">
+            
         </div>
+    </div>
+
     </form>
     <div id="result" class="result-container">
         <div id="loading" class="loading">Processing...</div>
         <div id="prediction" class="prediction"></div>
         <div id="imagePreview" class="image-preview"></div>
     </div>
+
 </center>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <div class="footer">
         <br>
-        <a href="https://github.com/Zeeshaik/Intelligent-Approach-for-Classification-of-Osteoporosis/blob/master/README.md">Click Here To Know More About Project (Read me)</a>
+        
     <div>
 </body>
 </html>

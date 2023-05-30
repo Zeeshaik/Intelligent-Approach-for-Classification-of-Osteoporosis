@@ -59,5 +59,9 @@ def index():
 def uploaded_file(filename):
     return send_from_directory('static/uploads', filename)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
