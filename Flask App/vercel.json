@@ -3,7 +3,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "Flask App/app.py"
+        "dest": "/app.py"
       }
     ],
     "env": {
