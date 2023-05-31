@@ -4,10 +4,6 @@
     "version": 2,
     "routes": [
       {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
         "src": "/(.*)",
         "dest": "Flask App/app.py"
       }
