@@ -1,6 +1,4 @@
 {
-    "clearUrls: ture,
-    "trailingSlash: false,
     "version": 2,
     "routes": [
       {
