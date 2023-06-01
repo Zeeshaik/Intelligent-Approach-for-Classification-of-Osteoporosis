@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistics</title>
+    <!-- Add any necessary CSS or styling here -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand-title"><a href="{{ url_for('index') }}">OSTEOPOROSIS</a></div>
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}" target = "_blank">About Us</a></li>
+            <li><a href="https://github.com/Zeeshaik/Intelligent-Approach-for-Classification-of-Osteoporosis/blob/master/README.md" target = "_blank">Read me</a></li>
+
+          </ul>
+    </nav>
+
+    <div class="header">
+        <div class= "title_"><h1>INTELLIGENT APPROACH FOR CLASSIFICATION OF-</h1> <h1 class="title_1">OSTEOPOROSIS</h1></div>
+    </div>
+
+
+    <h1 id="stats">Statistics</h1>
+    <div class="container_stats">
+        <div class = "result_acc">
+            <!-- Display the statistics -->
+            <h2>Accuracy: {{ statistics['Accuracy'] }}</h2>
+            <h2>Precision: {{ statistics['Precision'] }}</h2>
+            <h2>Recall: {{ statistics['Recall'] }}</h2>
+            <h2>F1 Score: {{ statistics['F1 Score'] }}</h2>
+        </div>
+        <!-- Display the confusion matrix -->
+        
+        <div id="confusion-matrix">
+                <h2>Confusion Matrix</h2>
+                <img src="{{ url_for('static', filename='uploads/confusion_matrix.png') }}" alt="Confusion Matrix">
+        </div>
+        
+    </div>
+    <!-- Include the necessary JavaScript libraries -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plot_confusion_matrix.js') }}"></script>
+
+    <!-- Execute the JavaScript code to plot the confusion matrix -->
+    <script>
+        var cmData = {{ cm| safe }};
+        var classes = ['Normal', 'Doubtful', 'Mild', 'Moderate', 'Severe'];
+        plotConfusionMatrix(cmData, classes);
+    </script>
+</body>
+</html>

@@ -504,10 +504,71 @@ ul li {
 
 #desc{
     margin: 0%;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins';
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
+    text-align: start;
 }
 .desc_{
     color: #01b5dd;
+    font-size: 50px;
+    text-decoration: double;
+}
+
+.container_stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #00000000;
+    border-radius: 10px;
+    color: #000000;
+}
+
+#confusion-matrix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    background-color: #00000000;
+    border-radius: 10px;
+    color: #000000;
+}
+
+#confusion-matrix h2{
+    color: #01b5dd;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 0%;
+}
+
+.result_acc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #01b5dd;
+    border-radius: 10px;
+    color: #000000;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 30px;
+}
+
+#stats{
+    margin-top: 0px;
+}
+
+#confusion-matrix img{
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
 }
