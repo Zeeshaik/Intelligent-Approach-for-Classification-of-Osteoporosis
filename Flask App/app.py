@@ -52,7 +52,7 @@ label=np.array(label)
 from keras.utils import np_utils
 new_label=np_utils.to_categorical(label)
 
-x_train,x_test,y_train,y_test=train_test_split(data,new_label,test_size=0.1)
+
 
 
 
@@ -113,7 +113,7 @@ def about():
 # Route for statistics page
 @app.route('/statistics')
 def statistics():
-    
+    x_train,x_test,y_train,y_test=train_test_split(data,new_label,test_size=0.1)
     # Calculate the statistics for each uploaded image
     statistics = {}
     
