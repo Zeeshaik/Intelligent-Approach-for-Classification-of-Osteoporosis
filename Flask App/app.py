@@ -25,7 +25,7 @@ label_dict=dict(zip(categories_test,labels)) #empty dictionary
 print(label_dict)
 print(categories_test)
 print(labels)
-    
+prediction = None   
 data=[]
 label=[]
 for category in categories_test:
@@ -87,6 +87,7 @@ def get_precaution(prediction):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    global prediction
     if request.method == 'POST':
         if 'file' not in request.files:
             return "No file found"
@@ -98,6 +99,7 @@ def index():
             file.save(file_path)
             prediction = predict(file_path)
             precaution = get_precaution(prediction)
+            
             # res = prediction + " detected " + precaution
             return render_template("result.html", prediction = prediction, precaution=precaution, image_file=file.filename)
     return render_template("index.html")
@@ -113,6 +115,7 @@ def about():
 # Route for statistics page
 @app.route('/statistics')
 def statistics():
+    global prediction
     x_train,x_test,y_train,y_test=train_test_split(data,new_label,test_size=0.1)
     # Calculate the statistics for each uploaded image
     statistics = {}
@@ -141,7 +144,9 @@ def statistics():
     }
 
     # Render the statistics.html template and pass the statistics dictionary
-    return render_template('statistics.html', statistics=statistics)
+    return render_template('statistics.html', statistics=statistics, prediction=prediction)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0',port='5000', debug=True)
+

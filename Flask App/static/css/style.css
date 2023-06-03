@@ -572,3 +572,41 @@ ul li {
     height: 100%;
     border-radius: 10px;
 }
+
+.classes{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #00000000;
+    border-radius: 10px;
+    color: #000000;
+}
+
+.features_{
+    margin-left: 30px;
+
+    align-items: center;
+}
+
+.dataset{
+    text-decoration: none;
+    color:#ffffff;
+    background-color: #01b5dd;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #cccccc00;
+    padding: 10px;
+    margin: 10px;
+}
+
+.dataset:hover{
+    background-color: #ffffff;
+    color: #01b5dd;
+    font-weight: bold;
+    border: 1px solid #01b5dd;
+    border-radius: 0%;
+}

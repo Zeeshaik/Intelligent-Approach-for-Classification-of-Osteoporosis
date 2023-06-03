@@ -23,9 +23,25 @@
     <div class="header">
         <div class= "title_"><h1>INTELLIGENT APPROACH FOR CLASSIFICATION OF-</h1> <h1 class="title_1">OSTEOPOROSIS</h1></div>
     </div>
-
-
     <h1 id="stats">Statistics</h1>
+    <div class="features_">
+        DataSet Used : <a href="https://data.mendeley.com/datasets/t9ndx37v5h/1" class="dataset" target = "_blank">Dataset</a>
+        <p>Number of Images Used : 3671</p>
+        <p>Number of images used to train model : 3303</p>
+        <p>Number of images used to test model : 368</p>
+        
+        <p>Number of Classes : </p>
+        <ul class = "classes">
+            <li>Normal</li>
+            <li>Doubtful</li>
+            <li>Mild</li>
+            <li>Moderate</li>
+            <li>Severe</li>
+        </ul>
+        <h2>Predicted Category : {{ prediction }}</h2>
+    </div>
+
+    
     <div class="container_stats">
         <div class = "result_acc">
             <!-- Display the statistics -->
@@ -42,6 +58,8 @@
         </div>
         
     </div>
+
+        
     <!-- Include the necessary JavaScript libraries -->
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plot_confusion_matrix.js') }}"></script>
