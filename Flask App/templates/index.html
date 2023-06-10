@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Intelligent Approach for Classification of Osteoporosis</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +31,7 @@
         <form id="uploadForm" method="POST" action="{{ url_for('index') }}" enctype="multipart/form-data">
             <div class="form-group">
                 <br>
+                <input type="text" name="phone" id="fileinp" placeholder="Phone number" required><br>
                 <input type="file" name="file" id="fileInput" accept=".jpg, .jpeg, .png" required>
             </div>
             <div class="form-group">

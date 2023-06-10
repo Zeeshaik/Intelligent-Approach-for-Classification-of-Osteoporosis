@@ -610,3 +610,145 @@ ul li {
     border: 1px solid #01b5dd;
     border-radius: 0%;
 }
+
+#fileinp{
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: #01b5dd 2px solid;
+    width : 25%;
+    text-align: center;
+}
+
+
+/* Media query for mobile */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    .container_about{
+        max-width: 500px;
+        padding: 100px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* background-color: #757272c4; */
+        border-radius: 8px;
+        /* backdrop-filter: blur(10px); */
+        align-items: left;
+        margin:auto;
+        border: 3px solid #01b5dd;
+    }
+    .container_about p{
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        /* background-color: #64646400;    */
+        /* backdrop-filter: blur(0px); */
+        text-align: start;
+        
+    }
+    .container_about h2{
+        color:#01b5dd ;
+        text-decoration: underline;
+    }
+    .brand-title{
+        font-size: 30px;
+        font-weight: bold;
+        color: #01b5dd;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        background-color: #64646400;   
+        backdrop-filter: blur(0px);
+        text-align: start;
+        padding-left: 20px;
+    }
+    .brand-title a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .container_about h1{
+        background-color: #64646400;
+    }
+    .container_about h1{
+        color: #01b5dd;
+        text-decoration: none;
+        margin-top: 0px;
+    }
+    .container_about p{
+        text-align: justify;
+    }
+    .container_about ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: #000000;
+    }
+    .container_about ul li a:hover{
+        text-decoration: underline;
+        text-decoration-color: #01b5dd;
+    }
+    #desc{
+        margin: 0%;
+        font-family: 'Poppins';
+        font-weight: bold;
+        font-size: 40px;
+        text-align: start;
+    }
+    .desc_{
+        color: #01b5dd;
+        font-size: 50px;
+        text-decoration: double;
+    }
+    .container {
+        max-width: 500px;
+        padding: 100px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        /* background-color: #757272c4; */
+        border-radius: 8px;
+        /* backdrop-filter: blur(10px); */
+        align-items: left;
+        margin:auto;
+        border: 3px solid #01b5dd;
+    } 
+    .container h1{
+        color: #01b5dd;
+        text-decoration: none;
+        margin-top: 0px;
+    }
+    .container p{
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        /* background-color: #64646400;    */
+        /* backdrop-filter: blur(0px); */
+        text-align: start;
+        
+    }
+
+    .title_1{
+        font-size: 10px;
+        font-weight: bold;
+        color: #01b5dd;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+        background-color: #64646400;   
+        backdrop-filter: blur(0px);
+        text-align: start;
+        padding-left: 10px;
+    }
+
+    
+}
+    /* Adjust the styles for smaller screens */
+  /* Add more media queries for different screen sizes if needed */
+  
